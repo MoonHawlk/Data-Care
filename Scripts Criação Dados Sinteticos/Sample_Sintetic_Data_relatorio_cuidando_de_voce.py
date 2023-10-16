@@ -5,7 +5,7 @@ import random
 fake = Faker()
 
 # Especifique o caminho do arquivo CSV (caminho relativo)
-caminho_arquivo_csv = r"C:\Users\Felipe\Desktop\Script Python SR1\dados_sinteticos_relatorio_cuidando_de_voce.csv"
+caminho_arquivo_csv = r"C:\Users\totov\OneDrive\Área de Trabalho\Data-Care\Scripts Criação Dados Sinteticos\arquivos csv\dados_sinteticos_relatorio_cuidando_de_voce.csv"
 
 with open(caminho_arquivo_csv, 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
@@ -16,7 +16,7 @@ with open(caminho_arquivo_csv, 'w', newline='', encoding='utf-8') as file:
         "AgentEmail", "Tipo", "Empresa", "Apolice", "Plano", "QUESTÃO 1", "QUESTÃO 2"
     ])
     
-    for _ in range(1000):  # 1000 linhas de dados sintéticos como exemplo
+    for _ in range(20):  # 20 linhas de dados sintéticos como exemplo
         sequential_id = fake.uuid4()
         status = random.choice(["Open", "Closed", "Pending"])
         storage_date = fake.date_of_birth(minimum_age=18, maximum_age=75)
